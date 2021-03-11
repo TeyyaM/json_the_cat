@@ -8,8 +8,8 @@ request(api + arg, (error, response, body) => {
     if (!body[2]) {
       console.log(`Nothing found! Check the if breed, ${arg} is misspelt!`);
     } else {
-      // returns the object. Success!
-      console.log(JSON.parse(body));
+      // returns the description. Success!
+      console.log(JSON.parse(body)[1].description);
     }
   } else {
     throw error;
